@@ -70,17 +70,6 @@ Wire Wire Line
 	4850 1500 4850 1600
 Wire Wire Line
 	4850 1900 4100 1900
-$Comp
-L power:GND #PWR0101
-U 1 1 5DFFF61E
-P 3050 1900
-F 0 "#PWR0101" H 3050 1650 50  0001 C CNN
-F 1 "GND" V 3055 1772 50  0000 R CNN
-F 2 "" H 3050 1900 50  0001 C CNN
-F 3 "" H 3050 1900 50  0001 C CNN
-	1    3050 1900
-	0    1    1    0   
-$EndComp
 Connection ~ 4100 1900
 $Comp
 L Device:R R3
@@ -146,9 +135,6 @@ Wire Wire Line
 	3200 1900 4100 1900
 Wire Wire Line
 	3200 2150 3200 1900
-Wire Wire Line
-	3050 1900 3200 1900
-Connection ~ 3200 1900
 $Comp
 L Connector:AudioJack3 J1
 U 1 1 5E012848
@@ -160,14 +146,6 @@ F 3 "~" H 6050 2000 50  0001 C CNN
 	1    6050 2000
 	-1   0    0    -1  
 $EndComp
-Text HLabel 3050 1500 0    50   Input ~ 0
-PWM0
-Text HLabel 3050 2550 0    50   Input ~ 0
-PWM1
-Wire Wire Line
-	3350 1500 3050 1500
-Wire Wire Line
-	3350 2550 3050 2550
 Wire Wire Line
 	4850 1900 5850 1900
 Connection ~ 4850 1900
@@ -181,4 +159,43 @@ Wire Wire Line
 Connection ~ 4850 1500
 Wire Wire Line
 	5850 1500 5850 2000
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J2
+U 1 1 5E0099F7
+P 1800 1850
+F 0 "J2" H 1850 2267 50  0000 C CNN
+F 1 "Female Connector 2x5" H 1850 2176 50  0000 C CNN
+F 2 "" H 1800 1850 50  0001 C CNN
+F 3 "~" H 1800 1850 50  0001 C CNN
+	1    1800 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 1450 2100 2    63   ~ 0
+GPIO21 40\nGPIO20 38\nGPIO16 36\nGND 34\nPWM0 32
+Text Notes 2200 2100 0    63   ~ 0
+39 GND\n37 GPIO26\n35 GPIO19\n33 PWM1\n31 GPIO6\n
+Wire Wire Line
+	3200 1900 3200 1650
+Wire Wire Line
+	3200 1650 2100 1650
+Connection ~ 3200 1900
+Wire Wire Line
+	3350 2550 2800 2550
+Wire Wire Line
+	2800 2550 2800 1950
+Wire Wire Line
+	2800 1950 2100 1950
+Wire Wire Line
+	3350 1500 850  1500
+Wire Wire Line
+	850  1500 850  2050
+Wire Wire Line
+	850  2050 1600 2050
+NoConn ~ 1600 1650
+NoConn ~ 1600 1750
+NoConn ~ 1600 1850
+NoConn ~ 1600 1950
+NoConn ~ 2100 1750
+NoConn ~ 2100 1850
+NoConn ~ 2100 2050
 $EndSCHEMATC
