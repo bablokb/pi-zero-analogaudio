@@ -1,0 +1,184 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Pi-Zero Analog Audio"
+Date "2019-12-22"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5DFF3DA6
+P 3500 1500
+F 0 "R1" V 3293 1500 50  0000 C CNN
+F 1 "270 Ohm" V 3384 1500 50  0000 C CNN
+F 2 "" V 3430 1500 50  0001 C CNN
+F 3 "~" H 3500 1500 50  0001 C CNN
+	1    3500 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DFF44D3
+P 4850 1750
+F 0 "R2" H 4920 1796 50  0000 L CNN
+F 1 "150 Ohm" H 4920 1705 50  0000 L CNN
+F 2 "" V 4780 1750 50  0001 C CNN
+F 3 "~" H 4850 1750 50  0001 C CNN
+	1    4850 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5DFF4F28
+P 4100 1750
+F 0 "C1" H 4215 1796 50  0000 L CNN
+F 1 "33 nF" H 4215 1705 50  0000 L CNN
+F 2 "" H 4138 1600 50  0001 C CNN
+F 3 "~" H 4100 1750 50  0001 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C2
+U 1 1 5DFFAC54
+P 4500 1500
+F 0 "C2" V 4752 1500 50  0000 C CNN
+F 1 "10 µF" V 4661 1500 50  0000 C CNN
+F 2 "" H 4500 1500 50  0001 C CNN
+F 3 "~" H 4500 1500 50  0001 C CNN
+	1    4500 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 1500 4850 1500
+Wire Wire Line
+	3650 1500 4100 1500
+Connection ~ 4100 1500
+Wire Wire Line
+	4100 1500 4350 1500
+Wire Wire Line
+	4100 1500 4100 1600
+Wire Wire Line
+	4850 1500 4850 1600
+Wire Wire Line
+	4850 1900 4100 1900
+$Comp
+L power:GND #PWR0101
+U 1 1 5DFFF61E
+P 3050 1900
+F 0 "#PWR0101" H 3050 1650 50  0001 C CNN
+F 1 "GND" V 3055 1772 50  0000 R CNN
+F 2 "" H 3050 1900 50  0001 C CNN
+F 3 "" H 3050 1900 50  0001 C CNN
+	1    3050 1900
+	0    1    1    0   
+$EndComp
+Connection ~ 4100 1900
+$Comp
+L Device:R R3
+U 1 1 5E007053
+P 3500 2550
+F 0 "R3" V 3293 2550 50  0000 C CNN
+F 1 "270 Ohm" V 3384 2550 50  0000 C CNN
+F 2 "" V 3430 2550 50  0001 C CNN
+F 3 "~" H 3500 2550 50  0001 C CNN
+	1    3500 2550
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E00705D
+P 4850 2300
+F 0 "R4" H 4920 2346 50  0000 L CNN
+F 1 "150 Ohm" H 4920 2255 50  0000 L CNN
+F 2 "" V 4780 2300 50  0001 C CNN
+F 3 "~" H 4850 2300 50  0001 C CNN
+	1    4850 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5E007067
+P 4100 2300
+F 0 "C3" H 4215 2346 50  0000 L CNN
+F 1 "33 nF" H 4215 2255 50  0000 L CNN
+F 2 "" H 4138 2150 50  0001 C CNN
+F 3 "~" H 4100 2300 50  0001 C CNN
+	1    4100 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:CP1 C4
+U 1 1 5E007071
+P 4500 2550
+F 0 "C4" V 4752 2550 50  0000 C CNN
+F 1 "10 µF" V 4661 2550 50  0000 C CNN
+F 2 "" H 4500 2550 50  0001 C CNN
+F 3 "~" H 4500 2550 50  0001 C CNN
+	1    4500 2550
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4650 2550 4850 2550
+Wire Wire Line
+	3650 2550 4100 2550
+Connection ~ 4100 2550
+Wire Wire Line
+	4100 2550 4350 2550
+Wire Wire Line
+	4100 2550 4100 2450
+Wire Wire Line
+	4850 2550 4850 2450
+Wire Wire Line
+	4850 2150 4100 2150
+Connection ~ 4100 2150
+Wire Wire Line
+	3200 2150 4100 2150
+Wire Wire Line
+	3200 1900 4100 1900
+Wire Wire Line
+	3200 2150 3200 1900
+Wire Wire Line
+	3050 1900 3200 1900
+Connection ~ 3200 1900
+$Comp
+L Connector:AudioJack3 J1
+U 1 1 5E012848
+P 6050 2000
+F 0 "J1" H 5770 2025 50  0000 R CNN
+F 1 "AudioJack3" H 5770 1934 50  0000 R CNN
+F 2 "" H 6050 2000 50  0001 C CNN
+F 3 "~" H 6050 2000 50  0001 C CNN
+	1    6050 2000
+	-1   0    0    -1  
+$EndComp
+Text HLabel 3050 1500 0    50   Input ~ 0
+PWM0
+Text HLabel 3050 2550 0    50   Input ~ 0
+PWM1
+Wire Wire Line
+	3350 1500 3050 1500
+Wire Wire Line
+	3350 2550 3050 2550
+Wire Wire Line
+	4850 1900 5850 1900
+Connection ~ 4850 1900
+Wire Wire Line
+	4850 2150 5850 2150
+Wire Wire Line
+	5850 2150 5850 2100
+Connection ~ 4850 2150
+Wire Wire Line
+	4850 1500 5850 1500
+Connection ~ 4850 1500
+Wire Wire Line
+	5850 1500 5850 2000
+$EndSCHEMATC
