@@ -6,8 +6,8 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2019-12-22"
-Rev ""
-Comp ""
+Rev "2"
+Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
 Comment3 ""
