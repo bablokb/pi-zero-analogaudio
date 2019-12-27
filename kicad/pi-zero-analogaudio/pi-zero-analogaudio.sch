@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2019-12-22"
-Rev "2"
+Rev "3"
 Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
@@ -150,12 +150,10 @@ Wire Wire Line
 	4850 1900 5850 1900
 Connection ~ 4850 1900
 Wire Wire Line
-	4850 2150 5850 2150
+	4850 2150 5500 2150
 Wire Wire Line
 	5850 2150 5850 2100
 Connection ~ 4850 2150
-Wire Wire Line
-	4850 1500 5850 1500
 Connection ~ 4850 1500
 Wire Wire Line
 	5850 1500 5850 2000
@@ -164,7 +162,7 @@ L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5E0099F7
 P 1800 1850
 F 0 "J2" H 1850 2267 50  0000 C CNN
-F 1 "Female Connector 2x5" H 1850 2176 50  0000 C CNN
+F 1 "Pi Connector 2x5 Female" H 1850 2176 50  0000 C CNN
 F 2 "" H 1800 1850 50  0001 C CNN
 F 3 "~" H 1800 1850 50  0001 C CNN
 	1    1800 1850
@@ -198,4 +196,29 @@ NoConn ~ 1600 1950
 NoConn ~ 2100 1750
 NoConn ~ 2100 1850
 NoConn ~ 2100 2050
+Wire Wire Line
+	4850 1500 5850 1500
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5E060129
+P 6200 1600
+F 0 "J3" H 6172 1482 50  0000 R CNN
+F 1 "Audio-Out" H 6172 1573 50  0000 R CNN
+F 2 "" H 6200 1600 50  0001 C CNN
+F 3 "~" H 6200 1600 50  0001 C CNN
+	1    6200 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 1500 6000 1500
+Connection ~ 5850 1500
+Wire Wire Line
+	5500 2150 5500 1600
+Wire Wire Line
+	5500 1600 6000 1600
+Connection ~ 5500 2150
+Wire Wire Line
+	5500 2150 5850 2150
+Text Notes 6700 1600 0    50   ~ 0
+Left\nRight
 $EndSCHEMATC
