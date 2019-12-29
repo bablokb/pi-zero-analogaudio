@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2019-12-22"
-Rev "3"
+Rev "4"
 Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
@@ -150,10 +150,7 @@ Wire Wire Line
 	4850 1900 5850 1900
 Connection ~ 4850 1900
 Wire Wire Line
-	4850 2150 5500 2150
-Wire Wire Line
 	5850 2150 5850 2100
-Connection ~ 4850 2150
 Connection ~ 4850 1500
 Wire Wire Line
 	5850 1500 5850 2000
@@ -216,9 +213,14 @@ Wire Wire Line
 	5500 2150 5500 1600
 Wire Wire Line
 	5500 1600 6000 1600
-Connection ~ 5500 2150
 Wire Wire Line
 	5500 2150 5850 2150
 Text Notes 6700 1600 0    50   ~ 0
-Left\nRight
+Right\nLeft
+Wire Wire Line
+	4850 2550 5500 2550
+Wire Wire Line
+	5500 2550 5500 2150
+Connection ~ 4850 2550
+Connection ~ 5500 2150
 $EndSCHEMATC
