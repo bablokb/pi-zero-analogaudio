@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
-Date "2019-12-22"
-Rev "4"
+Date "2020-01-04"
+Rev "5"
 Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
@@ -147,13 +147,11 @@ F 3 "~" H 6050 2000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 1900 5850 1900
+	4850 1900 5350 1900
 Connection ~ 4850 1900
 Wire Wire Line
 	5850 2150 5850 2100
 Connection ~ 4850 1500
-Wire Wire Line
-	5850 1500 5850 2000
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5E0099F7
@@ -189,38 +187,62 @@ Wire Wire Line
 NoConn ~ 1600 1650
 NoConn ~ 1600 1750
 NoConn ~ 1600 1850
-NoConn ~ 1600 1950
 NoConn ~ 2100 1750
 NoConn ~ 2100 1850
 NoConn ~ 2100 2050
 Wire Wire Line
 	4850 1500 5850 1500
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 5E060129
-P 6200 1600
-F 0 "J3" H 6172 1482 50  0000 R CNN
-F 1 "Audio-Out" H 6172 1573 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6200 1600 50  0001 C CNN
-F 3 "~" H 6200 1600 50  0001 C CNN
-	1    6200 1600
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5850 1500 6000 1500
-Connection ~ 5850 1500
-Wire Wire Line
-	5500 2150 5500 1600
-Wire Wire Line
-	5500 1600 6000 1600
 Wire Wire Line
 	5500 2150 5850 2150
-Text Notes 6700 1600 0    50   ~ 0
-Right\nLeft
+Text Notes 6750 1700 0    50   ~ 0
+Right\n\nLeft
 Wire Wire Line
 	4850 2550 5500 2550
 Wire Wire Line
 	5500 2550 5500 2150
 Connection ~ 4850 2550
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 5E107AFE
+P 6350 1600
+F 0 "J3" H 6322 1532 50  0000 R CNN
+F 1 "Audio Out" H 6322 1623 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6350 1600 50  0001 C CNN
+F 3 "~" H 6350 1600 50  0001 C CNN
+	1    6350 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 1500 5850 2000
+Wire Wire Line
+	5500 2150 5500 1700
+Wire Wire Line
+	5500 1700 6150 1700
 Connection ~ 5500 2150
+Wire Wire Line
+	5850 1500 6150 1500
+Connection ~ 5850 1500
+Wire Wire Line
+	6150 1600 5350 1600
+Wire Wire Line
+	5350 1600 5350 1900
+Connection ~ 5350 1900
+Wire Wire Line
+	5350 1900 5850 1900
+Wire Wire Line
+	1600 1950 750  1950
+Wire Wire Line
+	1900 1650 1950 1650
+Wire Wire Line
+	1950 1650 1950 1300
+Wire Wire Line
+	1950 1300 750  1300
+Wire Wire Line
+	750  1300 750  1950
+Connection ~ 750  1950
+Wire Wire Line
+	750  2150 750  1950
+Connection ~ 3200 2150
+Wire Wire Line
+	3200 2150 750  2150
 $EndSCHEMATC
