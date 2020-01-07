@@ -135,20 +135,6 @@ Wire Wire Line
 	3200 1900 4100 1900
 Wire Wire Line
 	3200 2150 3200 1900
-$Comp
-L Connector:AudioJack3 J1
-U 1 1 5E012848
-P 6050 2000
-F 0 "J1" H 5770 2025 50  0000 R CNN
-F 1 "AudioJack3" H 5770 1934 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 6050 2000 50  0001 C CNN
-F 3 "~" H 6050 2000 50  0001 C CNN
-	1    6050 2000
-	-1   0    0    -1  
-$EndComp
-Connection ~ 4850 1900
-Wire Wire Line
-	5850 2150 5850 2100
 Connection ~ 4850 1500
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
@@ -188,16 +174,10 @@ NoConn ~ 1600 1850
 NoConn ~ 2100 1750
 NoConn ~ 2100 1850
 NoConn ~ 2100 2050
-Wire Wire Line
-	4850 1500 5850 1500
-Wire Wire Line
-	5500 2150 5850 2150
 Text Notes 6750 1700 0    50   ~ 0
 Right\n\nLeft
 Wire Wire Line
 	4850 2550 5500 2550
-Wire Wire Line
-	5500 2550 5500 2150
 Connection ~ 4850 2550
 $Comp
 L Connector:Conn_01x03_Male J3
@@ -211,15 +191,7 @@ F 3 "~" H 6350 1600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5850 1500 5850 2000
-Wire Wire Line
-	5500 2150 5500 1700
-Wire Wire Line
 	5500 1700 6150 1700
-Connection ~ 5500 2150
-Wire Wire Line
-	5850 1500 6150 1500
-Connection ~ 5850 1500
 Wire Wire Line
 	1600 1950 750  1950
 Wire Wire Line
@@ -264,21 +236,51 @@ Wire Wire Line
 Connection ~ 1300 1150
 Wire Wire Line
 	1300 1150 1300 1300
-Wire Wire Line
-	4850 1900 5850 1900
 $Comp
-L power:GND #PWR0102
-U 1 1 5E149127
-P 5500 1100
-F 0 "#PWR0102" H 5500 850 50  0001 C CNN
-F 1 "GND" H 5505 927 50  0000 C CNN
-F 2 "" H 5500 1100 50  0001 C CNN
-F 3 "" H 5500 1100 50  0001 C CNN
-	1    5500 1100
+L STX-3120-3B:STX-3120-3B U1
+U 1 1 5E14E2BF
+P 6200 2200
+F 0 "U1" H 5720 2037 50  0000 R CNN
+F 1 "STX-3120-3B" H 5720 2128 50  0000 R CNN
+F 2 "STX-3120" H 6200 2200 50  0001 L BNN
+F 3 "" H 6200 2200 50  0001 C CNN
+	1    6200 2200
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6150 1600 5500 1600
+	5500 1700 5500 2550
 Wire Wire Line
-	5500 1600 5500 1100
+	4850 1500 5750 1500
+Wire Wire Line
+	5500 2550 6000 2550
+Wire Wire Line
+	6000 2550 6000 2300
+Connection ~ 5500 2550
+Wire Wire Line
+	6000 2200 5750 2200
+Wire Wire Line
+	5750 2200 5750 1500
+Connection ~ 5750 1500
+Wire Wire Line
+	5750 1500 6150 1500
+$Comp
+L power:GND #PWR?
+U 1 1 5E153B4C
+P 5900 1250
+F 0 "#PWR?" H 5900 1000 50  0001 C CNN
+F 1 "GND" H 5905 1077 50  0000 C CNN
+F 2 "" H 5900 1250 50  0001 C CNN
+F 3 "" H 5900 1250 50  0001 C CNN
+	1    5900 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 1600 5900 1600
+Wire Wire Line
+	5900 1600 5900 1250
+Wire Wire Line
+	6000 1900 5900 1900
+Wire Wire Line
+	5900 1900 5900 1600
+Connection ~ 5900 1600
 $EndSCHEMATC
