@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2020-01-04"
-Rev "5"
+Rev "6"
 Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
@@ -146,8 +146,6 @@ F 3 "~" H 6050 2000 50  0001 C CNN
 	1    6050 2000
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	4850 1900 5350 1900
 Connection ~ 4850 1900
 Wire Wire Line
 	5850 2150 5850 2100
@@ -223,26 +221,64 @@ Wire Wire Line
 	5850 1500 6150 1500
 Connection ~ 5850 1500
 Wire Wire Line
-	6150 1600 5350 1600
-Wire Wire Line
-	5350 1600 5350 1900
-Connection ~ 5350 1900
-Wire Wire Line
-	5350 1900 5850 1900
-Wire Wire Line
 	1600 1950 750  1950
 Wire Wire Line
 	1900 1650 1950 1650
 Wire Wire Line
 	1950 1650 1950 1300
 Wire Wire Line
-	1950 1300 750  1300
+	1950 1300 1300 1300
 Wire Wire Line
 	750  1300 750  1950
-Connection ~ 750  1950
+$Comp
+L power:GND #PWR0101
+U 1 1 5E145812
+P 1300 1050
+F 0 "#PWR0101" H 1300 800 50  0001 C CNN
+F 1 "GND" H 1305 877 50  0000 C CNN
+F 2 "" H 1300 1050 50  0001 C CNN
+F 3 "" H 1300 1050 50  0001 C CNN
+	1    1300 1050
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	750  2150 750  1950
-Connection ~ 3200 2150
+	1300 1050 1300 1150
+Connection ~ 1300 1300
 Wire Wire Line
-	3200 2150 750  2150
+	1300 1300 750  1300
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E147CAD
+P 1700 1050
+F 0 "#FLG0101" H 1700 1125 50  0001 C CNN
+F 1 "PWR_FLAG" H 1700 1223 50  0000 C CNN
+F 2 "" H 1700 1050 50  0001 C CNN
+F 3 "~" H 1700 1050 50  0001 C CNN
+	1    1700 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1150 1700 1150
+Wire Wire Line
+	1700 1150 1700 1050
+Connection ~ 1300 1150
+Wire Wire Line
+	1300 1150 1300 1300
+Wire Wire Line
+	4850 1900 5850 1900
+$Comp
+L power:GND #PWR0102
+U 1 1 5E149127
+P 5500 1100
+F 0 "#PWR0102" H 5500 850 50  0001 C CNN
+F 1 "GND" H 5505 927 50  0000 C CNN
+F 2 "" H 5500 1100 50  0001 C CNN
+F 3 "" H 5500 1100 50  0001 C CNN
+	1    5500 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 1600 5500 1600
+Wire Wire Line
+	5500 1600 5500 1100
 $EndSCHEMATC
