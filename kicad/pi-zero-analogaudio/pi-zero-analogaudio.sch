@@ -244,7 +244,7 @@ U 1 1 5E14E2BF
 P 6050 2250
 F 0 "U1" H 5570 2087 50  0000 R CNN
 F 1 "STX-3120-3B" H 5570 2178 50  0000 R CNN
-F 2 "STX-3120" H 6050 2250 50  0001 L BNN
+F 2 "Download:STX-3120" H 6050 2250 50  0001 L BNN
 F 3 "" H 6050 2250 50  0001 C CNN
 	1    6050 2250
 	-1   0    0    1   
@@ -281,4 +281,26 @@ Wire Wire Line
 Connection ~ 5850 1500
 Wire Wire Line
 	5850 1500 6150 1500
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E161BC7
+P 1400 6800
+F 0 "H1" H 1500 6846 50  0000 L CNN
+F 1 "MountingHole" H 1500 6755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1400 6800 50  0001 C CNN
+F 3 "~" H 1400 6800 50  0001 C CNN
+	1    1400 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E162474
+P 1400 7100
+F 0 "H2" H 1500 7146 50  0000 L CNN
+F 1 "MountingHole" H 1500 7055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1400 7100 50  0001 C CNN
+F 3 "~" H 1400 7100 50  0001 C CNN
+	1    1400 7100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

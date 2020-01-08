@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/bablokb/git/pi-zero-analogaudio/kicad/pi-zero-analogaudio/pi-zero-analogaudio.sch)
-    (date "Di 07 Jan 2020 11:04:15 CET")
+    (date "Mi 08 Jan 2020 18:37:06 CET")
     (tool "Eeschema 5.1.5-5.1.5")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -87,10 +87,24 @@
       (tstamp 5E107AFE))
     (comp (ref U1)
       (value STX-3120-3B)
-      (footprint STX-3120)
+      (footprint Download:STX-3120)
       (libsource (lib STX-3120-3B) (part STX-3120-3B) (description ""))
       (sheetpath (names /) (tstamps /))
-      (tstamp 5E14E2BF)))
+      (tstamp 5E14E2BF))
+    (comp (ref H1)
+      (value MountingHole)
+      (footprint MountingHole:MountingHole_2.7mm_M2.5_DIN965)
+      (datasheet ~)
+      (libsource (lib Mechanical) (part MountingHole) (description "Mounting Hole without connection"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5E161BC7))
+    (comp (ref H2)
+      (value MountingHole)
+      (footprint MountingHole:MountingHole_2.7mm_M2.5_DIN965)
+      (datasheet ~)
+      (libsource (lib Mechanical) (part MountingHole) (description "Mounting Hole without connection"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5E162474)))
   (libparts
     (libpart (lib Connector) (part Conn_01x03_Male)
       (description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
@@ -156,6 +170,14 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
+    (libpart (lib Mechanical) (part MountingHole)
+      (description "Mounting Hole without connection")
+      (docs ~)
+      (footprints
+        (fp MountingHole*))
+      (fields
+        (field (name Reference) H)
+        (field (name Value) MountingHole)))
     (libpart (lib STX-3120-3B) (part STX-3120-3B)
       (fields
         (field (name Reference) U)
@@ -172,6 +194,8 @@
       (uri /usr/share/kicad/library/Connector_Generic.lib))
     (library (logical Device)
       (uri /usr/share/kicad/library/Device.lib))
+    (library (logical Mechanical)
+      (uri /usr/share/kicad/library/Mechanical.lib))
     (library (logical STX-3120-3B)
       (uri /home/bablokb/dokumente/Elektronik/kicad/modules/STX-3120-3B.lib)))
   (nets
