@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2020-01-04"
-Rev "6"
+Rev "7"
 Comp "Bernhard Bablok"
 Comment1 ""
 Comment2 ""
@@ -149,12 +149,8 @@ F 3 "~" H 1800 1850 50  0001 C CNN
 $EndComp
 Text Notes 1450 2100 2    63   ~ 0
 GPIO21 40\nGPIO20 38\nGPIO16 36\nGND 34\nPWM0 32
-Text Notes 2200 2100 0    63   ~ 0
-39 GND\n37 GPIO26\n35 GPIO19\n33 PWM1\n31 GPIO6\n
 Wire Wire Line
 	3200 1900 3200 1650
-Wire Wire Line
-	3200 1650 2100 1650
 Connection ~ 3200 1900
 Wire Wire Line
 	3350 2550 2800 2550
@@ -180,10 +176,10 @@ Wire Wire Line
 	4850 2550 5500 2550
 Connection ~ 4850 2550
 $Comp
-L Connector:Conn_01x03_Male J3
+L Connector:Conn_01x03_Male J1
 U 1 1 5E107AFE
 P 6350 1600
-F 0 "J3" H 6322 1532 50  0000 R CNN
+F 0 "J1" H 6322 1532 50  0000 R CNN
 F 1 "Audio Out" H 6322 1623 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6350 1600 50  0001 C CNN
 F 3 "~" H 6350 1600 50  0001 C CNN
@@ -194,12 +190,6 @@ Wire Wire Line
 	5500 1700 6150 1700
 Wire Wire Line
 	1600 1950 750  1950
-Wire Wire Line
-	1900 1650 1950 1650
-Wire Wire Line
-	1950 1650 1950 1300
-Wire Wire Line
-	1950 1300 1300 1300
 Wire Wire Line
 	750  1300 750  1950
 $Comp
@@ -215,7 +205,6 @@ F 3 "" H 1300 1050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1300 1050 1300 1150
-Connection ~ 1300 1300
 Wire Wire Line
 	1300 1300 750  1300
 $Comp
@@ -287,7 +276,7 @@ U 1 1 5E161BC7
 P 1400 6800
 F 0 "H1" H 1500 6846 50  0000 L CNN
 F 1 "MountingHole" H 1500 6755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1400 6800 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1400 6800 50  0001 C CNN
 F 3 "~" H 1400 6800 50  0001 C CNN
 	1    1400 6800
 	1    0    0    -1  
@@ -298,9 +287,21 @@ U 1 1 5E162474
 P 1400 7100
 F 0 "H2" H 1500 7146 50  0000 L CNN
 F 1 "MountingHole" H 1500 7055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1400 7100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1400 7100 50  0001 C CNN
 F 3 "~" H 1400 7100 50  0001 C CNN
 	1    1400 7100
 	1    0    0    -1  
 $EndComp
+Text Notes 2200 2100 0    63   ~ 0
+39 GND\n37 GPIO26\n35 GPIO19\n33 PWM1\n31 GPIO6\n
+Wire Wire Line
+	1950 1650 2100 1650
+Connection ~ 2100 1650
+Wire Wire Line
+	2100 1650 3200 1650
+Wire Wire Line
+	2100 1650 2100 1300
+Wire Wire Line
+	2100 1300 1300 1300
+Connection ~ 1300 1300
 $EndSCHEMATC
