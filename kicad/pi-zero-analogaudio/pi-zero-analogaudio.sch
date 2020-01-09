@@ -274,7 +274,7 @@ $Comp
 L Mechanical:MountingHole H1
 U 1 1 5E161BC7
 P 1400 6800
-F 0 "H1" H 1500 6846 50  0000 L CNN
+F 0 "H1" H 1500 6846 50  0001 L CNN
 F 1 "MountingHole" H 1500 6755 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1400 6800 50  0001 C CNN
 F 3 "~" H 1400 6800 50  0001 C CNN
@@ -285,7 +285,7 @@ $Comp
 L Mechanical:MountingHole H2
 U 1 1 5E162474
 P 1400 7100
-F 0 "H2" H 1500 7146 50  0000 L CNN
+F 0 "H2" H 1500 7146 50  0001 L CNN
 F 1 "MountingHole" H 1500 7055 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1400 7100 50  0001 C CNN
 F 3 "~" H 1400 7100 50  0001 C CNN
