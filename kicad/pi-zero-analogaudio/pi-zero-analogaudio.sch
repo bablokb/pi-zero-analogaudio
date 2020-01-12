@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 1 1
 Title "Pi-Zero Analog Audio"
 Date "2020-01-04"
-Rev "7"
+Rev "8"
 Comp "Bernhard Bablok"
-Comment1 ""
+Comment1 "https://github.com/bablokb/pi-zero-analogaudio"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -135,7 +135,6 @@ Wire Wire Line
 	3200 1900 4100 1900
 Wire Wire Line
 	3200 2150 3200 1900
-Connection ~ 4850 1500
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5E0099F7
@@ -172,9 +171,6 @@ NoConn ~ 2100 1850
 NoConn ~ 2100 2050
 Text Notes 6750 1700 0    50   ~ 0
 Right\n\nLeft
-Wire Wire Line
-	4850 2550 5500 2550
-Connection ~ 4850 2550
 $Comp
 L Connector:Conn_01x03_Male J1
 U 1 1 5E107AFE
@@ -186,8 +182,6 @@ F 3 "~" H 6350 1600 50  0001 C CNN
 	1    6350 1600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5500 1700 6150 1700
 Wire Wire Line
 	1600 1950 750  1950
 Wire Wire Line
@@ -225,21 +219,6 @@ Wire Wire Line
 Connection ~ 1300 1150
 Wire Wire Line
 	1300 1150 1300 1300
-Wire Wire Line
-	5500 1700 5500 2250
-$Comp
-L STX-3120-3B:STX-3120-3B U1
-U 1 1 5E14E2BF
-P 6050 2250
-F 0 "U1" H 5570 2087 50  0000 R CNN
-F 1 "STX-3120-3B" H 5570 2178 50  0000 R CNN
-F 2 "Download:STX-3120" H 6050 2250 50  0001 L BNN
-F 3 "" H 6050 2250 50  0001 C CNN
-	1    6050 2250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4850 1500 5850 1500
 $Comp
 L power:GND #PWR0102
 U 1 1 5E15C9EB
@@ -252,24 +231,9 @@ F 3 "" H 5700 1200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5850 2350 5700 2350
-Wire Wire Line
-	5700 2350 5700 1600
-Wire Wire Line
 	5700 1600 6150 1600
-Connection ~ 5700 1600
 Wire Wire Line
 	5700 1600 5700 1200
-Wire Wire Line
-	5850 2250 5500 2250
-Connection ~ 5500 2250
-Wire Wire Line
-	5500 2250 5500 2550
-Wire Wire Line
-	5850 1950 5850 1500
-Connection ~ 5850 1500
-Wire Wire Line
-	5850 1500 6150 1500
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5E161BC7
@@ -304,4 +268,44 @@ Wire Wire Line
 Wire Wire Line
 	2100 1300 1300 1300
 Connection ~ 1300 1300
+$Comp
+L STX-3120-3B:STX-3120-5B U1
+U 1 1 5E14E2BF
+P 6200 2050
+F 0 "U1" H 5720 1887 50  0000 R CNN
+F 1 "STX-3120-5B" H 5720 1978 50  0000 R CNN
+F 2 "Download:STX-3120-5B" H 6200 2050 50  0001 L BNN
+F 3 "" H 6200 2050 50  0001 C CNN
+	1    6200 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2550 6000 2550
+Wire Wire Line
+	6000 2550 6000 2350
+Connection ~ 4850 2550
+Wire Wire Line
+	4850 1500 5350 1500
+Wire Wire Line
+	5350 1500 5350 2050
+Wire Wire Line
+	5350 2050 6000 2050
+Connection ~ 4850 1500
+Wire Wire Line
+	5700 1600 5700 1950
+Wire Wire Line
+	5700 1950 6000 1950
+Connection ~ 5700 1600
+Wire Wire Line
+	6000 2150 5800 2150
+Wire Wire Line
+	5800 2150 5800 1500
+Wire Wire Line
+	5800 1500 6150 1500
+Wire Wire Line
+	6000 2250 5900 2250
+Wire Wire Line
+	5900 2250 5900 1700
+Wire Wire Line
+	5900 1700 6150 1700
 $EndSCHEMATC
