@@ -35,6 +35,8 @@ In the folder `kicad` you can find a complete pcb, designed for the above
 throughhole components. You will need to adapt the design if you use a
 different audio-jack.
 
+![](pcb1.jpg)
+![](pcb2.jpg)
 
 Software and System Configuration
 =================================
