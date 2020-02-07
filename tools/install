@@ -70,6 +70,11 @@ install_files() {
 
 configure_system() {
   # update /boot/config.txt
+  if ! grep -q "^dtparam=audio=on" /boot/config.txt ; then
+    echo -e "[INFO] configuring audio in /boot/config.txt" 2>&1
+    echo "dtparam=audio=on" >> /boot/config.txt
+    echo -e "[INFO] please reboot your system" 2>&1
+  fi
   if ! grep -q "^dtoverlay=pwm-2chan" /boot/config.txt ; then
     echo -e "[INFO] configuring 2-channel pwm in /boot/config.txt" 2>&1
     echo "dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4" >> /boot/config.txt

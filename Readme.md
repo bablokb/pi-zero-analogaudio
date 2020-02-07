@@ -53,6 +53,7 @@ and just run the install command:
 
 The install command will add the following lines to your `/boot/config.txt`:
 
+    dtparam=audio=on
     dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
 
 This configures analog-audio for the physical pins 32 and 33. Other
